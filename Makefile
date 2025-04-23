@@ -12,6 +12,7 @@ SRC = ft_isalpha.c
 	\ ft_strlen.c
 	\ ft_memset.c
 	\ ft_bzero.c
+	\ ft_memcpy.c
 
 OBJ = ft_isalpha.o
 	\ ft_isdigit.o
@@ -21,6 +22,7 @@ OBJ = ft_isalpha.o
 	\ ft_strlen.o
 	\ ft_memset.o
 	\ ft_bzero.o
+	\ ft_memcpy.o
 
 all: $(NAME)
 
