@@ -5,8 +5,12 @@ NAME = libft.a
 HEADER = libft.h
 
 SRC = ft_isalpha.c
+	\ ft_isdigit.c
+	\ ft_isalnum.c
 
 OBJ = ft_isalpha.o
+	\ ft_isdigit.o
+	\ ft_isalnum.o
 
 all: $(NAME)
 
