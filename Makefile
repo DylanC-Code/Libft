@@ -8,11 +8,13 @@ SRC = ft_isalpha.c
 	\ ft_isdigit.c
 	\ ft_isalnum.c
 	\ ft_isascii.c
+	\ ft_isprint.c
 
 OBJ = ft_isalpha.o
 	\ ft_isdigit.o
 	\ ft_isalnum.o
 	\ ft_isascii.o
+	\ ft_isprint.o
 
 all: $(NAME)
 
