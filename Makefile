@@ -9,12 +9,14 @@ SRC = ft_isalpha.c
 	\ ft_isalnum.c
 	\ ft_isascii.c
 	\ ft_isprint.c
+	\ ft_strlen.c
 
 OBJ = ft_isalpha.o
 	\ ft_isdigit.o
 	\ ft_isalnum.o
 	\ ft_isascii.o
 	\ ft_isprint.o
+	\ ft_strlen.o
 
 all: $(NAME)
 
