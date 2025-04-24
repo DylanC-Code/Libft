@@ -76,12 +76,16 @@ TEST_OPTIONS = -I $(TEST_HEADER) -o $(TEST_NAME)
 TEST_SRC = \
 	$(TEST_PATH)libft.test.c \
 	$(TEST_PATH)ft_isalpha.test.c \
-	$(TEST_PATH)ft_isdigit.test.c
+	$(TEST_PATH)ft_isdigit.test.c \
+	$(TEST_PATH)ft_isalnum.test.c \
+	$(TEST_PATH)ft_isascii.test.c
 
 TEST_OBJ = \
 	libft.test.o \
 	ft_isalpha.test.o \
-	ft_isdigit.test.o
+	ft_isdigit.test.o \
+	ft_isalnum.test.o \
+	ft_isascii.test.o
 
 all: $(NAME)
 

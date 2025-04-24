@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.test.c                                  :+:      :+:    :+:   */
+/*   ft_isascii.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 16:05:29 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 17:48:04 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/24 17:49:07 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/24 17:52:27 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-bool	test_is_digit(char c)
+bool	test_isascii(char c)
 {
-	const bool	both_are_true = (ft_isdigit(c) && isdigit(c));
-	const bool	both_are_false = (!ft_isdigit(c) && !isdigit(c));
+	const bool	both_are_true = (ft_isascii(c) && isascii(c));
+	const bool	both_are_false = (!ft_isascii(c) && !isascii(c));
 	const bool	is_ok = (both_are_false || both_are_true);
 
 	if (is_ok)
@@ -28,23 +28,25 @@ bool	test_is_digit(char c)
 static void	tests_should_be_true(void)
 {
 	printf("\n===== should be true =====\n\n");
-	test_is_digit('0');
-	test_is_digit('5');
-	test_is_digit('9');
+	test_isascii('\0');
+	test_isascii('!');
+	test_isascii('?');
+	test_isascii('Z');
+	test_isascii((char)127);
 }
 
 static void	tests_should_be_false(void)
 {
 	printf("\n\n===== should be false =====\n\n");
-	test_is_digit('a');
-	test_is_digit('&');
-	test_is_digit('>');
+	test_isascii((char)-4);
+	test_isascii((char)-50);
+	test_isascii((char)128);
 }
 
-void	tests_isdigit(void)
+void	tests_isascii(void)
 {
-	printf("\n================= [isdigit] =================");
+	printf("================= [isascii] =================");
 	tests_should_be_true();
 	tests_should_be_false();
-	printf("\n=============================================\n");
+	printf("\n=============================================");
 }

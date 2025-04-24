@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:02:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 17:34:35 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/24 17:42:36 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ int	main(void)
 {
 	tests_isalpha();
 	tests_isdigit();
+	tests_isalnum();
 	return (0);
 }

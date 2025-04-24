@@ -6,13 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:05:29 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 17:36:58 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/24 17:48:10 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.test.h"
 
 bool	test_is_alpha(char c)
 {
@@ -29,7 +27,7 @@ bool	test_is_alpha(char c)
 
 static void	tests_should_be_true(void)
 {
-	printf("\n\n===== should be true =====\n\n");
+	printf("\n===== should be true =====\n\n");
 	test_is_alpha('a');
 	test_is_alpha('z');
 	test_is_alpha('A');
