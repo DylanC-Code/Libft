@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 13:38:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 14:11:22 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/24 13:56:44 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/24 14:01:22 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+bool	ft_isspace(int c)
 {
-	size_t	i;
-	size_t	j;
+	const char	*white_spaces = " \f\n\r\t\v";
+	size_t		i;
 
 	i = 0;
-	j = 0;
-	if (!big || !little)
-		return (NULL);
-	while (i < len && big[i])
-	{
-		if (big[i] == big[j])
-			j++;
-		else
-			j = 0;
-		if (j == len - 1)
-			return ((char *)&big[i - j]);
-		i++;
-	}
-	return (NULL);
+	while (white_spaces[i])
+		if (c == white_spaces[i])
+			return (true);
+	return (false);
 }

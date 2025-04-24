@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 13:39:48 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/24 13:56:35 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,13 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *nptr);
 
 // Not required
 int		ft_min(int num1, int num2);
 bool	ft_islower(int c);
 bool	ft_isupper(int c);
+bool	ft_isspace(int c);
+void	*ft_trimstart(char *s);
 
 #endif

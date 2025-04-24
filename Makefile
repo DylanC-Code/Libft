@@ -24,7 +24,8 @@ SRC = ft_isalpha.c \
 		ft_strncmp.c \
 		ft_memchr.c \
 		ft_memcmp.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_atoi.c
 
 
 OBJ = ft_isalpha.o \
@@ -46,15 +47,20 @@ OBJ = ft_isalpha.o \
 		ft_strncmp.o \
 		ft_memchr.o \
 		ft_memcmp.o \
-		ft_strnstr.o
+		ft_strnstr.o \
+		ft_atoi.o
 
 SRC_OTHER = ft_min.c \
 		ft_islower.c \
-		ft_isupper.c
+		ft_isupper.c \
+		ft_isspace.c \
+		ft_trimstart.c
 
 OBJ_OTHER = ft_min.o \
 		ft_islower.o \
-		ft_isupper.o
+		ft_isupper.o \
+		ft_isspace.o \
+		ft_trimstart.o
 
 all: $(NAME)
 

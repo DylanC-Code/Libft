@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_trimstart.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 13:38:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 14:11:22 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/24 13:54:14 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/24 14:10:33 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_trimstart(char *s)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	if (!big || !little)
+	if (!s)
 		return (NULL);
-	while (i < len && big[i])
+	while (*s)
 	{
-		if (big[i] == big[j])
-			j++;
-		else
-			j = 0;
-		if (j == len - 1)
-			return ((char *)&big[i - j]);
-		i++;
+		if (!ft_isspace(*s))
+			return (s);
+		s++;
 	}
-	return (NULL);
+	return (s);
 }
