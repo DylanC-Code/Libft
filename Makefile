@@ -1,9 +1,9 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-OPTIONS = -c -I libft.h
 
 NAME = libft.a
 HEADER = libft.h
+OPTIONS = -c -I
 
 SRC = ft_isalpha.c \
 		ft_isdigit.c \
@@ -66,18 +66,42 @@ OBJ_OTHER = ft_min.o \
 		ft_isspace.o \
 		ft_trimstart.o
 
+# Test
+
+TEST_PATH = ./tests/
+TEST_NAME = libft_tests
+TEST_HEADER = $(TEST_PATH)libft.test.h
+TEST_OPTIONS = -I $(TEST_HEADER) -o $(TEST_NAME)
+
+TEST_SRC = \
+	$(TEST_PATH)libft.test.c \
+	$(TEST_PATH)ft_isalpha.test.c \
+	$(TEST_PATH)ft_isdigit.test.c
+
+TEST_OBJ = \
+	libft.test.o \
+	ft_isalpha.test.o \
+	ft_isdigit.test.o
+
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(OPTIONS) $(SRC) $(SRC_OTHER)
+	$(CC) $(CFLAGS) $(OPTIONS) $(HEADER) $(SRC) $(SRC_OTHER)
 	ar rc $(NAME) $(OBJ) $(OBJ_OTHER)
 	ranlib $(NAME)
 
+test: all $(TEST_OBJ)
+	$(CC) $(CFLAGS) $(TEST_OBJ) $(NAME) $(TEST_OPTIONS)
+	./$(TEST_NAME)
+
+$(TEST_OBJ): $(TEST_SRC)
+	$(CC) $(CFLAGS) -c $(TEST_SRC)
+
 clean:
-	rm -f $(OBJ) $(OBJ_OTHER)
+	rm -f $(OBJ) $(OBJ_OTHER) $(TEST_OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(TEST_NAME)
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 17:29:19 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 10:22:24 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/24 16:35:09 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	if (!s)
 		return ;
-	while (((int *)s)[i] && i < n)
+	while (i < n)
 		((int *)s)[i] = 0;
 }

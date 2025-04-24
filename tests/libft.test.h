@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.test.c                                  :+:      :+:    :+:   */
+/*   libft.test.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 09:51:00 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 10:10:50 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/24 17:34:50 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_TEST_H
+# define LIBFT_TEST_H
 
-bool	test_memmove(void)
-{
-	const size_t	size = 13;
-	const char		src = "Hello World!";
-	char			dest[size];
-	const char		*res_dest = ft_memmove(dest, src, size);
+void	tests_isalpha(void);
+void	tests_isdigit(void);
 
-	// return (ft_strc);
-}
-
-void	tests_memmove(void)
-{
-	test_memmove();
-}
+#endif
