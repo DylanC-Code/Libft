@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 14:23:37 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 15:05:50 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/24 14:58:46 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/24 15:57:14 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	*mptr;
+	const size_t	len = ft_strlen(s);
+	char			*res;
 	size_t			i;
 
-	if (nmemb * size > INT_MAX)
-		return (0);
-	if (!nmemb || !size)
-	{
-		mptr = malloc(0);
-		if (!mptr)
-			return (NULL);
-		return (mptr);
-	}
-	i = 0;
-	mptr = malloc(sizeof(size) * nmemb);
-	if (!mptr)
+	res = malloc(sizeof(char) * len + 1);
+	if (!res)
 		return (NULL);
-	while (i < size * nmemb)
+	i = 0;
+	while (i < len)
 	{
-		mptr[i] = '\0';
+		res[i] = s[i];
 		i++;
 	}
-	return (mptr);
+	res[i] = '\0';
+	return (res);
 }
