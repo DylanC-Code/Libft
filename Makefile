@@ -21,7 +21,8 @@ SRC = ft_isalpha.c \
 		ft_tolower.c \
 		ft_strchr.c \
 		ft_strrchr.c \
-		ft_strncmp.c
+		ft_strncmp.c \
+		ft_memchr.c
 
 
 OBJ = ft_isalpha.o \
@@ -40,7 +41,8 @@ OBJ = ft_isalpha.o \
 		ft_tolower.o \
 		ft_strchr.o \
 		ft_strrchr.o \
-		ft_strncmp.o
+		ft_strncmp.o \
+		ft_memchr.o
 
 SRC_OTHER = ft_min.c \
 		ft_islower.c \
