@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 17:45:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 10:10:57 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/24 10:23:14 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*s = src;
 	unsigned char		*d;
-	int					i;
+	size_t				i;
 
 	d = dest;
 	if (s < d)
