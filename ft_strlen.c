@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 17:09:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 12:58:20 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 13:35:00 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (s && s[i])
+	while (s[i])
 		i++;
 	return (i);
 }

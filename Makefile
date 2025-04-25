@@ -30,29 +30,7 @@ SRC = ft_isalpha.c \
 		ft_strdup.c
 
 
-OBJ = ft_isalpha.o \
-		ft_isdigit.o \
-		ft_isalnum.o \
-		ft_isascii.o \
-		ft_isprint.o \
-		ft_strlen.o \
-		ft_memset.o \
-		ft_bzero.o \
-		ft_memcpy.o \
-		ft_memmove.o \
-		ft_strlcpy.o \
-		ft_strlcat.o \
-		ft_toupper.o \
-		ft_tolower.o \
-		ft_strchr.o \
-		ft_strrchr.o \
-		ft_strncmp.o \
-		ft_memchr.o \
-		ft_memcmp.o \
-		ft_strnstr.o \
-		ft_atoi.o \
-		ft_calloc.o \
-		ft_strdup.o
+OBJ = $(SRC:.c=.o)
 
 SRC_OTHER = ft_min.c \
 		ft_islower.c \
@@ -81,14 +59,11 @@ TEST_SRC = \
 	$(TEST_PATH)ft_isalpha.test.c \
 	$(TEST_PATH)ft_isdigit.test.c \
 	$(TEST_PATH)ft_isalnum.test.c \
-	$(TEST_PATH)ft_isascii.test.c
+	$(TEST_PATH)ft_isascii.test.c \
+	$(TEST_PATH)ft_isprint.test.c \
+	$(TEST_PATH)ft_strlen.test.c
 
-TEST_OBJ = \
-	libft.test.o \
-	ft_isalpha.test.o \
-	ft_isdigit.test.o \
-	ft_isalnum.test.o \
-	ft_isascii.test.o
+TEST_OBJ = $(patsubst ./tests/%.c,tests/%.o,$(TEST_SRC))
 
 all: $(NAME)
 
@@ -102,8 +77,8 @@ test: fclean all $(TEST_OBJ)
 	@clear
 	@./$(TEST_NAME)
 
-$(TEST_OBJ): $(TEST_SRC)
-	@$(CC) $(CFLAGS) -c $(TEST_SRC)
+tests/%.o: ./tests/%.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ) $(OBJ_OTHER) $(TEST_OBJ)
