@@ -62,7 +62,8 @@ TEST_SRC = \
 	$(TEST_PATH)ft_isascii.test.c \
 	$(TEST_PATH)ft_isprint.test.c \
 	$(TEST_PATH)ft_strlen.test.c \
-	$(TEST_PATH)ft_memset.test.c
+	$(TEST_PATH)ft_memset.test.c \
+	$(TEST_PATH)ft_bzero.test.c
 
 TEST_OBJ = $(patsubst ./tests/%.c,tests/%.o,$(TEST_SRC))
 
