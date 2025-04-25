@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:02:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/25 12:02:25 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 13:40:26 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	tests_isascii();
 	tests_isprint();
 	tests_strlen();
+	tests_memset();
 	print_summary();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 09:26:41 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/25 10:58:08 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 14:06:08 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ void	test_passed(const char *test_name)
 {
 	tests_passed++;
 	printf(GREEN "[PASS]" RESET ": %s\n", test_name);
+}
+
+void	test_failed(const char *test_name)
+{
+	tests_failed++;
+	printf(RED "[FAIL]" RESET ": %s\n", test_name);
 }
 
 void	assert_int_equal(int actual, int expected, const char *test_name)
