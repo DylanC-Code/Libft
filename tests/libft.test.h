@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/25 14:36:38 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 15:19:35 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	tests_isprint(void);
 void	tests_strlen(void);
 void	tests_memset(void);
 void	tests_bzero(void);
+void	tests_memcpy(void);
 
 #endif

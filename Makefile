@@ -63,7 +63,8 @@ TEST_SRC = \
 	$(TEST_PATH)ft_isprint.test.c \
 	$(TEST_PATH)ft_strlen.test.c \
 	$(TEST_PATH)ft_memset.test.c \
-	$(TEST_PATH)ft_bzero.test.c
+	$(TEST_PATH)ft_bzero.test.c \
+	$(TEST_PATH)ft_memcpy.test.c
 
 TEST_OBJ = $(patsubst ./tests/%.c,tests/%.o,$(TEST_SRC))
 
@@ -78,6 +79,7 @@ test: fclean all $(TEST_OBJ)
 	@$(CC) $(CFLAGS) $(TEST_OBJ) $(NAME) $(TEST_OPTIONS)
 	@clear
 	@./$(TEST_NAME)
+	@rm -f $(SRC_OBJ) $(TEST_OBJ) $(TEST_NAME) $(NAME)
 
 tests/%.o: ./tests/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
