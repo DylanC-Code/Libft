@@ -6,43 +6,46 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 17:42:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 17:47:40 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 11:09:50 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-bool	test_is_alnum(char c)
+static void	test_isalnum(char c, const char *test_name)
 {
-	const bool	both_are_true = (ft_isalnum(c) && isalnum(c));
-	const bool	both_are_false = (!ft_isalnum(c) && !isalnum(c));
-	const bool	is_ok = (both_are_false || both_are_true);
+	const bool	expected = isalnum(c);
+	const bool	actual = ft_isalnum(c);
 
-	if (is_ok)
-		printf("%c is OK ✅\n", c);
-	else
-		printf("%c is not OK ❌\n", c);
-	return (is_ok);
+	assert_truthy_equal(actual, expected, test_name);
+}
+
+static void	test_isnotalnum(char c, const char *test_name)
+{
+	const bool	expected = isalnum(c);
+	const bool	actual = ft_isalnum(c);
+
+	assert_falsy_equal(actual, expected, test_name);
 }
 
 static void	tests_should_be_true(void)
 {
 	printf("\n===== should be true =====\n\n");
-	test_is_alnum('a');
-	test_is_alnum('z');
-	test_is_alnum('A');
-	test_is_alnum('Z');
-	test_is_alnum('0');
-	test_is_alnum('9');
+	test_isalnum('a', "a is alnum");
+	test_isalnum('z', "z is alnum");
+	test_isalnum('A', "A is alnum");
+	test_isalnum('Z', "Z is alnum");
+	test_isalnum('0', "0 is alnum");
+	test_isalnum('9', "9 is alnum");
 }
 
 static void	tests_should_be_false(void)
 {
 	printf("\n\n===== should be false =====\n\n");
-	test_is_alnum('!');
-	test_is_alnum(':');
-	test_is_alnum('[');
-	test_is_alnum('|');
+	test_isnotalnum('!', "! is not alnum");
+	test_isnotalnum(':', ": is not alnum");
+	test_isnotalnum('[', "[ is not alnum");
+	test_isnotalnum('|', "| is not alnum");
 }
 
 void	tests_isalnum(void)

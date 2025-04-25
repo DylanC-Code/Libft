@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
-HEADER = libft.h
+HEADER = libft.h $(TEST_PATH)test_utils.h
 OPTIONS = -c -I
 
 SRC = ft_isalpha.c \
@@ -58,18 +58,21 @@ SRC_OTHER = ft_min.c \
 		ft_islower.c \
 		ft_isupper.c \
 		ft_isspace.c \
-		ft_trimstart.c
+		ft_trimstart.c \
+		$(TEST_PATH)test_utils.c
 
 OBJ_OTHER = ft_min.o \
 		ft_islower.o \
 		ft_isupper.o \
 		ft_isspace.o \
-		ft_trimstart.o
+		ft_trimstart.o \
+		test_utils.o
 
 # Test
 
 TEST_PATH = ./tests/
 TEST_NAME = libft_tests
+# TEST_HEADER = $(TEST_PATH)libft.test.h $(TEST_PATH)test_utils.h
 TEST_HEADER = $(TEST_PATH)libft.test.h
 TEST_OPTIONS = -I $(TEST_HEADER) -o $(TEST_NAME)
 
@@ -90,22 +93,25 @@ TEST_OBJ = \
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(OPTIONS) $(HEADER) $(SRC) $(SRC_OTHER)
-	ar rc $(NAME) $(OBJ) $(OBJ_OTHER)
-	ranlib $(NAME)
+	@$(CC) $(CFLAGS) $(OPTIONS) $(HEADER) $(SRC) $(SRC_OTHER)
+	@ar rsc $(NAME) $(OBJ) $(OBJ_OTHER)
+	@echo "$(NAME) archive generated ✅"
 
-test: all $(TEST_OBJ)
-	$(CC) $(CFLAGS) $(TEST_OBJ) $(NAME) $(TEST_OPTIONS)
-	./$(TEST_NAME)
+test: fclean all $(TEST_OBJ)
+	@$(CC) $(CFLAGS) $(TEST_OBJ) $(NAME) $(TEST_OPTIONS)
+	@clear
+	@./$(TEST_NAME)
 
 $(TEST_OBJ): $(TEST_SRC)
-	$(CC) $(CFLAGS) -c $(TEST_SRC)
+	@$(CC) $(CFLAGS) -c $(TEST_SRC)
 
 clean:
-	rm -f $(OBJ) $(OBJ_OTHER) $(TEST_OBJ)
+	@rm -f $(OBJ) $(OBJ_OTHER) $(TEST_OBJ)
+	@echo "File objects were been cleaned 🧼"
 
 fclean: clean
-	rm -f $(NAME) $(TEST_NAME)
+	@rm -f $(NAME) $(TEST_NAME)
+	@echo "Everything has been cleaned 🧼"
 
 re: fclean all
 

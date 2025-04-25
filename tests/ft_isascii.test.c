@@ -6,41 +6,44 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 17:49:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 17:52:27 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/25 11:13:03 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-bool	test_isascii(char c)
+static void	test_isascii(char c, const char *test_name)
 {
-	const bool	both_are_true = (ft_isascii(c) && isascii(c));
-	const bool	both_are_false = (!ft_isascii(c) && !isascii(c));
-	const bool	is_ok = (both_are_false || both_are_true);
+	const bool	expected = isascii(c);
+	const bool	actual = ft_isascii(c);
 
-	if (is_ok)
-		printf("%c is OK ✅\n", c);
-	else
-		printf("%c is not OK ❌\n", c);
-	return (is_ok);
+	assert_truthy_equal(actual, expected, test_name);
+}
+
+static void	test_isnotascii(char c, const char *test_name)
+{
+	const bool	expected = isascii(c);
+	const bool	actual = ft_isascii(c);
+
+	assert_falsy_equal(actual, expected, test_name);
 }
 
 static void	tests_should_be_true(void)
 {
 	printf("\n===== should be true =====\n\n");
-	test_isascii('\0');
-	test_isascii('!');
-	test_isascii('?');
-	test_isascii('Z');
-	test_isascii((char)127);
+	test_isascii('\0', "\\0 is ascii");
+	test_isascii('!', "! is ascii");
+	test_isascii('?', "? is ascii");
+	test_isascii('Z', "Z is ascii");
+	test_isascii((char)127, "\\127 is ascii");
 }
 
 static void	tests_should_be_false(void)
 {
 	printf("\n\n===== should be false =====\n\n");
-	test_isascii((char)-4);
-	test_isascii((char)-50);
-	test_isascii((char)128);
+	test_isnotascii((char)-4, "\\-4 is not ascii");
+	test_isnotascii((char)-50, "\\-50 is not ascii");
+	test_isnotascii((char)128, "\\128 is not ascii");
 }
 
 void	tests_isascii(void)
