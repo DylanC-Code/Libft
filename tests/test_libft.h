@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 15:10:42 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 18:41:57 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 #include <bsd/string.h>
 
 void tests_isalpha(void);
@@ -31,5 +32,6 @@ void tests_bzero(void);
 void tests_memcpy(void);
 void tests_memmove(void);
 void tests_strlcpy(void);
+void tests_strlcat(void);
 
 #endif

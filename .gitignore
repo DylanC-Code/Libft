@@ -2,5 +2,5 @@
 *.o
 *.gch
 *.pch
-libft_tests
+test_libft
 libft.a

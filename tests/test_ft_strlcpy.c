@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:53:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 15:33:45 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 18:26:14 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@ void test_strlcpy(char *src, size_t len, char *test_name)
 {
     char expected[len];
     char actual[len];
-    const bool expected_return = strlcpy(expected, src, len) == strlen(src);
-    const bool actual_return = ft_strlcpy(actual, src, len) == strlen(src);
+    const size_t expected_return = strlcpy(expected, src, len);
+    const size_t actual_return = ft_strlcpy(actual, src, len);
 
-    if (!expected_return || !actual_return)
+    if (expected_return != actual_return)
         return (test_failed(test_name));
     size_t i = -1;
     while (++i < len)
         if (expected[i] != actual[i])
             return (test_failed(test_name));
+    if (len > 0 && ((expected[len - 1] != '\0') || (actual[len - 1] != '\0')))
+        return test_failed(test_name);
     test_passed(test_name);
 }
 
