@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:54:00 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 12:54:09 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 19:54:42 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	char	*src;
+	size_t	i;
 
+	src = (char *)s;
 	i = -1;
-	if (!s)
-		return (NULL);
-	while (s[++i])
-		if (s[i] == c)
-			return ((char *)&s[i]);
+	while (src[++i])
+		if (src[i] == c)
+			return (src + i);
+	if (c == 0)
+		return (src + i);
 	return (NULL);
 }
