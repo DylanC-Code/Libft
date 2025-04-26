@@ -1,5 +1,6 @@
 .vscode
 *.o
 *.gch
+*.pch
 libft_tests
 libft.a

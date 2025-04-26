@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "test_libft.h"
 #include <string.h>
 
 static void	test_isprint(char *str, const char *test_name)

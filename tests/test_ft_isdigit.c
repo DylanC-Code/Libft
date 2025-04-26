@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "test_libft.h"
 
 static void	test_isdigit(char c, const char *test_name)
 {
