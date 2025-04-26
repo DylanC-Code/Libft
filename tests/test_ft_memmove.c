@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:08:26 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 14:49:31 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 14:54:59 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,14 @@ void test_memmove_overlap(char *src, size_t n, char *test_name)
 {
     char expected[100];
     char actual[100];
+    strcpy(expected, src);
+    strcpy(actual, src);
     const bool expected_return = memmove(expected, src, n) == expected;
     const bool actual_return = ft_memmove(actual, src, n) == actual;
     size_t i;
 
     if (!expected_return || !actual_return)
         return (test_failed(test_name));
-    // strcpy(expected, src);
-    // strcpy(actual, src);
-    // memmove(expected + 5, expected, n);
-    // ft_memmove(actual + 5, actual, n);
     i = 0;
     while (i < n)
     {

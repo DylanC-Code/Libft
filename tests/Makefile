@@ -18,7 +18,9 @@ SRC = \
 	test_ft_memset.c \
 	test_ft_bzero.c \
 	test_ft_memcpy.c \
-	test_ft_memmove.c
+	test_ft_memmove.c \
+	test_ft_strlcpy.c \
+
 
 OBJ = $(SRC:.c=.o)
 
