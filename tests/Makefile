@@ -23,6 +23,7 @@ SRC = \
 	test_ft_strlcat.c \
 	test_ft_toupper.c \
 	test_ft_tolower.c \
+	test_ft_strchr.c \
 
 
 OBJ = $(SRC:.c=.o)
