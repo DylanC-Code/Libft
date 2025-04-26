@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:54:14 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 14:10:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 22:32:13 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	*ft_trimstart(char *s)
 {
-	if (!s)
-		return (NULL);
-	while (*s)
-	{
-		if (!ft_isspace(*s))
-			return (s);
-		s++;
-	}
-	return (s);
+	size_t	i;
+
+	i = -1;
+	while (s[++i])
+		if (!ft_isspace(s[i]))
+			return (s + i);
+	return (s + i);
 }

@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 20:50:15 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 22:22:15 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void	tests_strncmp(void);
 void	tests_memchr(void);
 void	tests_memcmp(void);
 void	tests_strnstr(void);
+void	tests_atoi(void);
 
 #endif
