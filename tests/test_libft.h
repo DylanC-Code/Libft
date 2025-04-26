@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 23:22:26 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 23:35:57 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void	tests_atoi(void);
 void	tests_calloc(void);
 void	tests_strdup(void);
 void	tests_substr(void);
+void	tests_strjoin(void);
 
 #endif
