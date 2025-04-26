@@ -21,6 +21,7 @@ SRC = \
 	test_ft_memmove.c \
 	test_ft_strlcpy.c \
 	test_ft_strlcat.c \
+	test_ft_toupper.c \
 
 
 OBJ = $(SRC:.c=.o)

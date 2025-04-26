@@ -6,26 +6,27 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:02:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 17:59:16 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 19:35:13 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
 
-int main(void)
+int	main(void)
 {
-    tests_isalpha();
-    tests_isdigit();
-    tests_isalnum();
-    tests_isascii();
-    tests_isprint();
-    tests_strlen();
-    tests_memset();
-    tests_bzero();
-    tests_memcpy();
-    tests_memmove();
-    tests_strlcpy();
-    tests_strlcat();
-    print_summary();
-    return (0);
+	tests_isalpha();
+	tests_isdigit();
+	tests_isalnum();
+	tests_isascii();
+	tests_isprint();
+	tests_strlen();
+	tests_memset();
+	tests_bzero();
+	tests_memcpy();
+	tests_memmove();
+	tests_strlcpy();
+	tests_strlcat();
+	tests_toupper();
+	print_summary();
+	return (0);
 }
