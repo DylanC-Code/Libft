@@ -30,6 +30,7 @@ SRC = \
 	test_ft_memcmp.c \
 	test_ft_strnstr.c \
 	test_ft_atoi.c \
+	test_ft_calloc.c \
 
 
 OBJ = $(SRC:.c=.o)
