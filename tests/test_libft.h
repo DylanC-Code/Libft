@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.test.h                                       :+:      :+:    :+:   */
+/*   test_libft.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/25 16:08:05 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 13:38:42 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "test_utils.h"
 # include <ctype.h>
 # include <stdio.h>
+# include <string.h>
 
 void	tests_isalpha(void);
 void	tests_isdigit(void);
