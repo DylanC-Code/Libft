@@ -25,6 +25,7 @@ SRC = \
 	test_ft_tolower.c \
 	test_ft_strchr.c \
 	test_ft_strrchr.c \
+	test_ft_strncmp.c \
 
 
 OBJ = $(SRC:.c=.o)
