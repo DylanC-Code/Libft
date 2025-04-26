@@ -1,13 +1,13 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-PATH_LIB = ../libft.a
+LIB_PATH = ../libft.a
 
 NAME = test_libft
-HEADER = test_libft.h
-OPTIONS = -I $(HEADER) -o $(NAME)
+OPTIONS = -I. -o $(NAME)
 
 SRC = \
+	test_utils.c \
 	test_libft.c \
 	test_ft_isalpha.c \
 	test_ft_isdigit.c \
@@ -22,10 +22,10 @@ SRC = \
 
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+all: fclean $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) $(PATH_LIB) $(OPTIONS)
+	@$(CC) $(CFLAGS) $(OBJ) $(LIB_PATH) $(OPTIONS)
 	@./$(NAME)
 
 %.o: %.c
