@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:38:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 14:11:22 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 21:12:51 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	const size_t	little_len = ft_strlen(little);
+	size_t			i;
+	size_t			j;
 
-	i = 0;
+	i = -1;
 	j = 0;
-	if (!big || !little)
-		return (NULL);
-	while (i < len && big[i])
+	if (little_len == 0)
+		return ((char *)big);
+	while (++i < len)
 	{
-		if (big[i] == big[j])
+		if (big[i] == little[j])
 			j++;
 		else
 			j = 0;
-		if (j == len - 1)
-			return ((char *)&big[i - j]);
-		i++;
+		if (j == little_len)
+			return ((char *)big + i - j + 1);
 	}
 	return (NULL);
 }
