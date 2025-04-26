@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 22:21:48 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/26 23:09:51 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
-// void	*ft_calloc(size_t nmemb, size_t size);
-// char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 // Not required
 int		ft_min(int num1, int num2);

@@ -31,6 +31,7 @@ SRC = \
 	test_ft_strnstr.c \
 	test_ft_atoi.c \
 	test_ft_calloc.c \
+	test_ft_strdup.c \
 
 
 OBJ = $(SRC:.c=.o)
