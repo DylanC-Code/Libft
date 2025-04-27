@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 19:35:39 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 21:50:22 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 21:54:18 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	test_putstr_fd_pipe(char *str, char *test_name)
 	bytes_read = read(pipefd[0], buffer, len);
 	close(pipefd[0]);
 	buffer[bytes_read] = '\0';
-	if (bytes_read != len || strcmp(buffer, str) != 0)
+	if (bytes_read < 0 || (size_t)bytes_read != len || strcmp(buffer, str) != 0)
 		return (test_failed(test_name));
 	else
 		test_passed(test_name);
