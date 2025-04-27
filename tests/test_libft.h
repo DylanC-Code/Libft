@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:59:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 21:27:01 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 21:45:25 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <strings.h>
+# include <unistd.h>
 
 void	tests_isalpha(void);
 void	tests_isdigit(void);
@@ -52,5 +53,6 @@ void	tests_itoa(void);
 void	tests_strmapi(void);
 void	tests_striteri(void);
 void	tests_putchar_fd(void);
+void	tests_putstr_fd(void);
 
 #endif

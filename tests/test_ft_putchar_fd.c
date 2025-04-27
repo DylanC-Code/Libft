@@ -6,12 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 19:35:39 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 21:39:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 21:45:34 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_libft.h"
-#include <unistd.h>
 
 static void	test_putchar_fd_pipe(char c, char *test_name)
 {
