@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 11:09:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 12:38:53 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 13:08:54 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,18 +73,17 @@ static void	free_strs(char **strs)
 
 char	**ft_split(char const *s, char c)
 {
-	const unsigned int	words_nbs = count_words(s, c);
+	const unsigned int	words_nb = count_words(s, c);
 	char				*src;
-	char				**strs;
-	size_t				i_str;
+	char				**result;
+	size_t				word_index;
 	size_t				i;
-	size_t				len;
 
 	src = (char *)s;
-	strs = malloc(sizeof(char *) * (words_nbs + 1));
-	if (strs == NULL)
+	result = malloc(sizeof(char *) * (words_nb + 1));
+	if (!result)
 		return (NULL);
-	i_str = 0;
+	word_index = 0;
 	i = 0;
 	while (src[i])
 	{
@@ -92,13 +91,11 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (!src[i])
 			break ;
-		len = word_len(src + i, c);
-		strs[i_str] = ft_strndup(src + i, len);
-		if (strs[i_str] == NULL)
-			return (free_strs(strs), NULL);
-		i += len;
-		i_str++;
+		result[word_index] = ft_strndup(src + i, word_len(src + i, c));
+		if (result[word_index++] == NULL)
+			return (free_strs(result), NULL);
+		i += word_len(src + i, c);
 	}
-	strs[i_str] = NULL;
-	return (strs);
+	result[word_index] = NULL;
+	return (result);
 }
