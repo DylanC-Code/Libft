@@ -29,6 +29,7 @@ SRC = ft_isalpha.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
+		ft_strtrim.c \
 
 
 OBJ = $(SRC:.c=.o)
@@ -38,6 +39,7 @@ SRC_OTHER = ft_min.c \
 		ft_isupper.c \
 		ft_isspace.c \
 		ft_trimstart.c \
+		ft_ischarset.c \
 		# ./tests/test_utils.c
 
 OBJ_OTHER = $(SRC_OTHER:.c=.o)
