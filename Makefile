@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
-OPTIONS = -c -I. -I./tests/
+OPTIONS = -c -I.
 
 SRC = ft_isalpha.c \
 		ft_isdigit.c \
@@ -39,8 +39,11 @@ SRC = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 
-
 OBJ = $(SRC:.c=.o)
+
+SRC_BONUS = ft_lstnew_bonus.c \
+
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 SRC_OTHER = ft_min.c \
 		ft_islower.c \
@@ -61,6 +64,11 @@ $(NAME):
 	@ar rsc $(NAME) $(OBJ) $(OBJ_OTHER)
 	@echo "$(NAME) archive generated ✅"
 
+bonus:
+	@$(CC) $(CFLAGS) $(OPTIONS) $(SRC) $(SRC_OTHER) $(SRC_BONUS)
+	@ar rsc $(NAME) $(OBJ) $(OBJ_OTHER) $(OBJ_BONUS)
+	@echo "$(NAME) archive with bonus generated ✅"
+
 clean:
 	@rm -f $(OBJ) $(OBJ_OTHER)
 	@echo "File objects were been cleaned 🧼"
@@ -70,5 +78,7 @@ fclean: clean
 	@echo "Everything has been cleaned 🧼"
 
 re: fclean all
+
+rebonus: fclean bonus
 
 .PHONY: all clean fclean re
