@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 10:45:00 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 11:02:12 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ bool	ft_isupper(int c);
 bool	ft_isspace(int c);
 void	*ft_trimstart(char *s);
 bool	ft_ischarset(char c, const char *set);
+bool	ft_haschar(char *str, char c);
 
 #endif

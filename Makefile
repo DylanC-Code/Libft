@@ -40,6 +40,7 @@ SRC_OTHER = ft_min.c \
 		ft_isspace.c \
 		ft_trimstart.c \
 		ft_ischarset.c \
+		ft_haschar.c \
 		# ./tests/test_utils.c
 
 OBJ_OTHER = $(SRC_OTHER:.c=.o)
