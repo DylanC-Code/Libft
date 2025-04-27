@@ -42,6 +42,7 @@ SRC = \
 	test_ft_putchar_fd.c \
 	test_ft_putstr_fd.c \
 	test_ft_putendl_fd.c \
+	test_ft_putnbr_fd.c \
 
 
 OBJ = $(SRC:.c=.o)
