@@ -36,6 +36,7 @@ SRC = \
 	test_ft_strjoin.c \
 	test_ft_strtrim.c \
 	test_ft_split.c \
+	test_ft_itoa.c \
 
 
 OBJ = $(SRC:.c=.o)
