@@ -37,6 +37,7 @@ SRC = ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
 
 OBJ = $(SRC:.c=.o)
@@ -48,6 +49,7 @@ SRC_OTHER = ft_min.c \
 		ft_trimstart.c \
 		ft_ischarset.c \
 		ft_haschar.c \
+		ft_intlen.c \
 		# ./tests/test_utils.c
 
 OBJ_OTHER = $(SRC_OTHER:.c=.o)
