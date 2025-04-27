@@ -39,6 +39,7 @@ SRC = \
 	test_ft_itoa.c \
 	test_ft_strmapi.c \
 	test_ft_striteri.c \
+	test_ft_putchar_fd.c \
 
 
 OBJ = $(SRC:.c=.o)
