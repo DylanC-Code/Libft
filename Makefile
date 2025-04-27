@@ -42,7 +42,7 @@ SRC = ft_isalpha.c \
 OBJ = $(SRC:.c=.o)
 
 SRC_BONUS = ft_lstnew_bonus.c \
-	ft_lstadd_front.c
+	ft_lstadd_front_bonus.c
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
