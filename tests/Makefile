@@ -44,6 +44,7 @@ SRC = \
 	test_ft_putendl_fd.c \
 	test_ft_putnbr_fd.c \
 	test_ft_lstnew.c \
+	test_ft_lstadd_front.c \
 
 
 OBJ = $(SRC:.c=.o)

@@ -42,6 +42,7 @@ SRC = ft_isalpha.c \
 OBJ = $(SRC:.c=.o)
 
 SRC_BONUS = ft_lstnew_bonus.c \
+	ft_lstadd_front.c
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
@@ -70,7 +71,7 @@ bonus:
 	@echo "$(NAME) archive with bonus generated ✅"
 
 clean:
-	@rm -f $(OBJ) $(OBJ_OTHER)
+	@rm -f $(OBJ) $(OBJ_OTHER) $(OBJ_BONUS)
 	@echo "File objects were been cleaned 🧼"
 
 fclean: clean
