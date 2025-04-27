@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 19:35:39 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 17:12:42 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 17:21:06 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	tests_strmapi(void)
 	printf("================= [strmapi] =================\n\n");
 	test_strmapi("abcd", "badc", "strmapi simple abcd");
 	test_strmapi("1234", "2143", "strmapi chiffres 1234");
-	test_strmapi("!@#$", "\"?%\"", "strmapi symboles !@#$");
+	test_strmapi("!@#$", "\"?$#", "strmapi symboles !@#$");
 	test_strmapi("A", "B", "strmapi une majuscule seule");
 	test_strmapi("", "", "strmapi chaîne vide");
 	test_strmapi("XyZ", "Yx[", "strmapi mix lettres XyZ");
