@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 19:35:39 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 21:18:11 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/27 21:25:42 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,19 @@ void	test_striteri(char *str, char *expected, char *test_name)
 
 void	tests_striteri(void)
 {
+	char	str1[] = "abcd";
+	char	str2[] = "1234";
+	char	str3[] = "!@#$";
+	char	str4[] = "A";
+	char	str5[] = "";
+	char	str6[] = "XyZ";
+
 	printf("================= [striteri] =================\n\n");
-	test_striteri("abcd", "badc", "striteri simple abcd");
-	test_striteri("1234", "2143", "striteri chiffres 1234");
-	test_striteri("A", "B", "striteri une majuscule seule");
-	test_striteri("", "", "striteri chaîne vide");
-	test_striteri("XyZ", "Yx[", "striteri mix lettres XyZ");
+	test_striteri(str1, "badc", "striteri simple abcd");
+	test_striteri(str2, "2143", "striteri chiffres 1234");
+	test_striteri(str3, "\"?$#", "striteri symboles !@#$");
+	test_striteri(str4, "B", "striteri une majuscule seule");
+	test_striteri(str5, "", "striteri chaîne vide");
+	test_striteri(str6, "Yx[", "striteri mix lettres XyZ");
 	printf("\n=============================================\n");
 }
