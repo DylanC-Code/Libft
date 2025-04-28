@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIB_PATH = ../libft.a
 
 NAME = test_libft
-OPTIONS = -I. -o $(NAME)
+OPTIONS = -I. -o $(NAME) -lbsd
 
 SRC = \
 	test_utils.c \
@@ -45,6 +45,7 @@ SRC = \
 	test_ft_putnbr_fd.c \
 	test_ft_lstnew.c \
 	test_ft_lstadd_front.c \
+	test_ft_lstsize.c \
 
 
 OBJ = $(SRC:.c=.o)
