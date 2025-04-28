@@ -6,11 +6,34 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:49:54 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 22:47:03 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 20:14:15 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static bool	is_space(int c)
+{
+	const char	*white_spaces = " \f\n\r\t\v";
+	size_t		i;
+
+	i = -1;
+	while (white_spaces[++i])
+		if (c == white_spaces[i])
+			return (true);
+	return (false);
+}
+
+static void	*jump_whitespaces(char *s)
+{
+	size_t	i;
+
+	i = -1;
+	while (s[++i])
+		if (!is_space(s[i]))
+			return (s + i);
+	return (s + i);
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -18,7 +41,7 @@ int	ft_atoi(const char *nptr)
 	char	*ptr;
 	int		res;
 
-	ptr = ft_trimstart((char *)nptr);
+	ptr = jump_whitespaces((char *)nptr);
 	sign = 1;
 	res = 0;
 	if (*ptr == '-' || *ptr == '+')

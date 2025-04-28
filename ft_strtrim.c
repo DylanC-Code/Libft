@@ -6,11 +6,22 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 10:18:32 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 14:09:58 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 20:24:17 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static bool	ft_ischarset(char c, const char *set)
+{
+	size_t	i;
+
+	i = -1;
+	while (set[++i])
+		if (c == set[i])
+			return (true);
+	return (false);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

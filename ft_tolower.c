@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:49:57 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 11:51:10 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 20:27:06 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (!ft_isupper(c))
+	if (c < 'A' || c > 'Z')
 		return (c);
 	return (c - 'A' + 'a');
 }

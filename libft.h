@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 14:58:44 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 20:25:02 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,16 +60,6 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-
-// Not required
-int					ft_min(int num1, int num2);
-bool				ft_islower(int c);
-bool				ft_isupper(int c);
-bool				ft_isspace(int c);
-void				*ft_trimstart(char *s);
-bool				ft_ischarset(char c, const char *set);
-bool				ft_haschar(char *str, char c);
-unsigned char		ft_intlen(int nbr);
 
 // Bonus
 
