@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:38:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 15:37:27 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 17:16:48 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		content = f(lst->content);
 		next = ft_lstnew(content);
+		if (!next)
+			return (ft_lstclear(&first, del), del(content), NULL);
 		ft_lstadd_back(&first, next);
 		lst = lst->next;
-		if (!next || !content)
-			return (ft_lstclear(&first, del), NULL);
 	}
 	return (first);
 }

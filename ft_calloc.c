@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 14:23:37 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/24 15:05:50 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 16:11:22 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (mptr);
 	}
 	i = 0;
-	mptr = malloc(sizeof(size) * nmemb);
+	mptr = malloc(size * nmemb);
 	if (!mptr)
 		return (NULL);
 	while (i < size * nmemb)
