@@ -75,7 +75,7 @@ $(NAME):
 bonus:
 	@$(CC) $(CFLAGS) $(OPTIONS) $(SRC) $(SRC_OTHER) $(SRC_BONUS)
 	@ar rsc $(NAME) $(OBJ) $(OBJ_OTHER) $(OBJ_BONUS)
-	@echo "$(NAME) archive with bonus generated ✅"
+	@echo "$(NAME) archive with bonus generated 💻"
 
 clean:
 	@rm -f $(OBJ) $(OBJ_OTHER) $(OBJ_BONUS)

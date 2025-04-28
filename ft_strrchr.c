@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:56:16 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/26 20:05:21 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 13:49:11 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	src = (char *)s;
 	i = len;
-	if (c == 0)
+	if ((char)c == 0)
 		return (src + len);
 	while (--i < len)
 	{
-		if (src[i] == c)
+		if (src[i] == (char)c)
 			return (src + i);
 	}
 	return (NULL);

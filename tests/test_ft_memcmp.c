@@ -17,6 +17,7 @@ void	test_memcmp(const void *s1, const void *s2, size_t n, char *test_name)
 	const int	expected = memcmp(s1, s2, n);
 	const int	actual = ft_memcmp(s1, s2, n);
 
+	printf("E %d, A %d \n", expected, actual);
 	if (expected != actual)
 		return (test_failed(test_name));
 	test_passed(test_name);
@@ -30,6 +31,7 @@ void	tests_memcmp(void)
 	test_memcmp("abc", "ab", 2, "Partial comparison (same)");
 	test_memcmp("abc", "abz", 2, "Partial comparison (same first 2 chars)");
 	test_memcmp("abc", "abcde", 5, "Compare with longer second string");
+	test_memcmp("Bonjour !", "Salut tout le monde", 9, "Hamza Test");
 	test_memcmp("", "", 0, "Empty strings comparison");
 	test_memcmp("\0abc", "\0abc", 4,
 		"Strings starting with null byte (identical)");
