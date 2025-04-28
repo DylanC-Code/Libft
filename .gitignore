@@ -4,3 +4,4 @@
 *.pch
 test_libft
 libft.a
+.gitignore
