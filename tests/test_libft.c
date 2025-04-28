@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:02:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 09:21:08 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 10:08:33 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	main(void)
 	tests_lstnew();
 	tests_lstadd_front();
 	tests_lstsize();
+	tests_lstlast();
 	print_summary();
 	return (0);
 }

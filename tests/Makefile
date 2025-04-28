@@ -46,6 +46,7 @@ SRC = \
 	test_ft_lstnew.c \
 	test_ft_lstadd_front.c \
 	test_ft_lstsize.c \
+	test_ft_lstlast.c \
 
 
 OBJ = $(SRC:.c=.o)

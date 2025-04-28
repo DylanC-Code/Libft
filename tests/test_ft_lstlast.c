@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   test_ft_lstlast.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 10:09:06 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/26 19:35:39 by dcastor           #+#    #+#             */
+/*   Updated: 2025/04/28 10:11:08 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "test_libft.h"
 
-# include "libft.h"
-# include <limits.h>
-# include <stdbool.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-
-#endif
+static void	test_lstlast(char *test_name)
+{
+}
+void	tests_lstlast(void)
+{
+	printf("================= [lstlast] =================\n\n");
+	printf("\n=============================================\n");
+}
