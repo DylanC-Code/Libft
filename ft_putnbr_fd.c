@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 21:40:49 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 22:26:31 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 17:29:14 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	const unsigned char	n_len = ft_intlen(n);
-	char				buffer[n_len];
+	char				buffer[14];
 	long				nbr;
 	unsigned char		i;
 

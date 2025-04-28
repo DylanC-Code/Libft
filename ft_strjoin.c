@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 10:01:19 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 10:05:44 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 17:26:21 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = -1;
 	while (++i < total_len)
+	{
 		if (i < s1_len)
 			str[i] = s1[i];
 		else
 			str[i] = s2[i - s1_len];
+	}
 	str[total_len] = '\0';
 	return (str);
 }
