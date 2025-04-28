@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:38:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 11:11:40 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 15:37:27 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*actual;
+	t_list	*first;
 	t_list	*next;
+	void	*content;
 
-	actual = *lst;
-	next = NULL;
-	while (actual)
+	if (!lst)
+		return (NULL);
+	content = f(lst->content);
+	first = ft_lstnew(content);
+	if (!first)
+		return (del(content), NULL);
+	lst = lst->next;
+	while (lst)
 	{
-		next = actual->next;
-		del(actual->content);
-		free(actual);
-		actual = next;
+		content = f(lst->content);
+		next = ft_lstnew(content);
+		ft_lstadd_back(&first, next);
+		lst = lst->next;
+		if (!next || !content)
+			return (ft_lstclear(&first, del), NULL);
 	}
+	return (first);
 }
