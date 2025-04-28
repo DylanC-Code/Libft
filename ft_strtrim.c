@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 10:18:32 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 10:48:20 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/04/28 14:09:58 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (--i_end > i_start)
 		if (ft_ischarset(s1[i_end], set) == false)
 			break ;
-	str = malloc(s1_len - i_start - (s1_len - i_end) + 1);
+	str = malloc(s1_len - i_start - (s1_len - i_end) + 2);
 	if (str == NULL)
 		return (NULL);
 	i = -1;
