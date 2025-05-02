@@ -1,10 +1,13 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -MMD
 
 NAME = libft.a
 OPTIONS = -c -I.
 
-SRC = \
+BUILD_DIR = build/
+OUTPUT = ../$(BUILD_DIR)/$(NAME)
+
+SRCS = \
 	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -40,9 +43,9 @@ SRC = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 
-SRC_BONUS = \
+SRCS_BONUS = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
@@ -53,30 +56,46 @@ SRC_BONUS = \
 	ft_lstiter.c \
 	ft_lstmap.c \
 
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
+OBJS_BONUS = $(addprefix $(BUILD_DIR), $(SRCS_BONUS:.c=.o))
+
+DEPS = $(OBJS:.o=.d) $(OBJS_BONUS:.o=.d)
 
 all: $(NAME)
 
-$(NAME):
-	@$(CC) $(CFLAGS) $(OPTIONS) $(SRC)
-	@ar rsc $(NAME) $(OBJ)
-	@echo "$(NAME) archive generated ✅"
+$(NAME): $(BUILD_DIR) $(OBJS)
+	@echo
+	@ar rsc $(OUTPUT) $(OBJS)
+	@echo "[$(NAME)] Archive generated ✅"
+	@echo
 
-bonus:
-	@$(CC) $(CFLAGS) $(OPTIONS) $(SRC_BONUS)
-	@ar r $(NAME) $(OBJ_BONUS)
-	@echo "bonus added to the archive $(NAME) 🎆"
+
+$(BUILD_DIR)%.o: %.c
+	@$(CC) $(CFLAGS) $(OPTIONS) $< -o $@
+	@echo "[$(NAME)] Compiling $<"
+
+$(BUILD_DIR):
+	@mkdir -p $(BUILD_DIR)
+	@echo "[$(NAME)] Creating build directory"
+
+bonus: all $(OBJS_BONUS)
+	@ar rcs $(OUTPUT) $(OBJS_BONUS)
+	@echo "[$(NAME)] Bonus successfully added to the archive 🎆"
+	@echo
 
 clean:
-	@rm -f $(OBJ) $(OBJ_BONUS)
-	@echo "File objects cleaned 🧼"
+	@echo
+	@rm -f $(OBJS) $(OBJS_BONUS) $(DEPS)
+	@echo "[$(NAME)] File objects cleaned 🧼"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Everything has been cleaned 🧼"
+	@echo "[$(NAME)] Everything has been cleaned 🧼"
+	@echo
 
 re: fclean all
 
 rebonus: fclean bonus
 
 .PHONY: all clean fclean re
+
+-include  $(DEPS)
