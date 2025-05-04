@@ -42,6 +42,7 @@ SRCS = \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	ft_abs.c \
 
 OBJS = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 
