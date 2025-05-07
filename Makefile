@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -MMD
+CFLAGS = -Wall -Wextra -Werror -MMD -g
 
 NAME = libft.a
 OPTIONS = -c -I.
@@ -45,6 +45,7 @@ SRCS = \
 	ft_abs.c \
 	ft_strset.c \
 	ft_itoa_base.c \
+	ft_uitoa.c \
 
 OBJS = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 

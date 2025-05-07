@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 16:14:11 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/07 16:41:23 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/07 18:06:50 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static unsigned int	check_base(const char *base)
 	return (i);
 }
 
-static unsigned int	get_len(long nbr, int base_len)
+static unsigned int	get_len(ssize_t nbr, int base_len)
 {
 	int	len;
 
@@ -69,17 +69,15 @@ static void	fill_str(char *res, long nbr, char *base, int len)
 	}
 }
 
-char	*ft_itoa_base(int n, char *base)
+char	*ft_itoa_base(ssize_t nbr, char *base)
 {
 	const unsigned int	base_len = check_base(base);
 	unsigned int		len;
-	long				nbr;
 	char				*res;
 
-	len = get_len(n, base_len);
+	len = get_len(nbr, base_len);
 	if (base_len < 2)
 		return (NULL);
-	nbr = n;
 	res = malloc(len + 1);
 	if (!res)
 		return (NULL);
