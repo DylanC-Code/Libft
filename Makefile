@@ -5,7 +5,7 @@ NAME = libft.a
 OPTIONS = -c -I.
 
 BUILD_DIR = build/
-OUTPUT = ../$(BUILD_DIR)/$(NAME)
+# OUTPUT = ../$(BUILD_DIR)/$(NAME)
 
 SRCS = \
 	ft_isalpha.c \
@@ -43,6 +43,8 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_abs.c \
+	ft_strset.c \
+	ft_itoa_base.c \
 
 OBJS = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 
@@ -65,7 +67,7 @@ all: $(NAME)
 
 $(NAME): $(BUILD_DIR) $(OBJS)
 	@echo
-	@ar rsc $(OUTPUT) $(OBJS)
+	@ar rsc $(NAME) $(OBJS)
 	@echo "[$(NAME)] Archive generated ✅"
 	@echo
 
@@ -79,7 +81,7 @@ $(BUILD_DIR):
 	@echo "[$(NAME)] Creating build directory"
 
 bonus: all $(OBJS_BONUS)
-	@ar rcs $(OUTPUT) $(OBJS_BONUS)
+	@ar rcs $(NAME) $(OBJS_BONUS)
 	@echo "[$(NAME)] Bonus successfully added to the archive 🎆"
 	@echo
 
