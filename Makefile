@@ -46,6 +46,7 @@ SRCS = \
 	ft_strset.c \
 	ft_itoa_base.c \
 	ft_uitoa.c \
+	ft_uitoa_base.c \
 
 OBJS = $(addprefix $(BUILD_DIR), $(SRCS:.c=.o))
 
