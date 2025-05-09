@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/09 16:37:55 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/09 16:42:25 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	memory/ft_memchr.c \
 	memory/ft_memcmp.c \
 	memory/ft_calloc.c \
+	number/ft_abs.c \
 	string/ft_strlen.c \
 	string/ft_strlcpy.c \
 	string/ft_strlcat.c \
@@ -50,6 +51,10 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	utils/ft_split.c \
 	utils/ft_atoi.c \
 	utils/ft_itoa.c \
+	utils/ft_itoa_base.c \
+	utils/ft_strset.c \
+	utils/ft_uitoa_base.c \
+	utils/ft_uitoa.c \
 	output/ft_putchar_fd.c \
 	output/ft_putstr_fd.c \
 	output/ft_putendl_fd.c \
