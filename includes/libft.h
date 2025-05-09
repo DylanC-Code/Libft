@@ -6,13 +6,14 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/07 22:34:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/09 16:55:46 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "validate.h"
 # include <limits.h>
 # include <stdbool.h>
 # include <stdlib.h>
