@@ -6,3 +6,4 @@ test_libft
 libft.a
 .gitignore
 build
+*.out
