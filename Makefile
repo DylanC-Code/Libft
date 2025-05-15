@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/10 15:17:22 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/15 21:28:29 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS_DIR = srcs/
 BUILD_DIR = build/
 
 SRCS = $(addprefix $(SRCS_DIR), \
+	bit/bit_is_set.c \
 	char/ft_isalpha.c \
 	char/ft_isdigit.c \
 	char/ft_isalnum.c \
