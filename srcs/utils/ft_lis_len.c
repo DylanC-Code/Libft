@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 23:05:15 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 23:21:44 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/18 23:46:52 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ size_t	ft_lis_len(int arr[], size_t size)
 		return (0);
 	i = -1;
 	j = 0;
+	tmp_arr[j] = arr[++i];
 	while (++i < size)
 	{
 		if (arr[i] > tmp_arr[j])
