@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/15 22:32:26 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/18 20:15:50 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include "utils.h"
 # include "validate.h"
 # include "bit.h"
+# include "dlist.h"
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);

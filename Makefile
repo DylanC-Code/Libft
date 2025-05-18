@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/18 11:24:37 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/18 20:16:43 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	char/ft_isprint.c \
 	char/ft_toupper.c \
 	char/ft_tolower.c \
+	dlist/ft_dlst_new.c \
 	memory/ft_memset.c \
 	memory/ft_bzero.c \
 	memory/ft_memcpy.c \
