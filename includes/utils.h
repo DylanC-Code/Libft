@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 15:17:34 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/10 16:02:01 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/18 11:16:34 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft.h"
 
 int		ft_atoi(const char *nptr);
+long	ft_atol(char *nptr);
 char	*ft_uitoa(unsigned int n);
 char	*ft_uitoa_base(unsigned int nbr, char *base);
 size_t	ft_strset(char *str, char c, size_t n);
