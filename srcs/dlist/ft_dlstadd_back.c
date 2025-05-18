@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dlist.h                                            :+:      :+:    :+:   */
+/*   ft_dlstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 20:11:44 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 20:18:55 by dcastor          ###   ########.fr       */
+/*   Created: 2025/05/18 20:18:52 by dcastor           #+#    #+#             */
+/*   Updated: 2025/05/18 20:22:12 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DLST_H
-# define DLST_H
+#include "libft.h"
 
-typedef struct s_dlist
+void	ft_dlstadd_back(t_dlist **p_head, t_dlist *new)
 {
-	void			*content;
-	struct s_dlist	*next;
-	struct s_dlist	*prev;
-}					t_dlist;
-
-t_dlist				*ft_dlst_new(void *content);
-void				ft_dlstadd_back(t_dlist **p_head, t_dlist *new);
-
-#endif
+	if (!*p_head)
+	{
+		*p_head = new;
+		return ;
+	}
+    while(*p_head && (*p_head)->next)
+        *p_head = (*p_head)->next;
+    (*p_head)->next = new;
+    new->prev = *p_head;
+}
