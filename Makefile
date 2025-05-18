@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/18 20:23:04 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/18 23:03:49 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,8 +55,9 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	utils/ft_split.c \
 	utils/ft_atoi.c \
 	utils/ft_atol.c \
-	utils/ft_itoa.c \
 	utils/ft_itoa_base.c \
+	utils/ft_itoa.c \
+	utils/ft_lower_bound.c \
 	utils/ft_strset.c \
 	utils/ft_uitoa_base.c \
 	utils/ft_uitoa.c \
