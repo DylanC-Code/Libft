@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 15:17:34 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 23:22:19 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/18 23:56:25 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_itoa(int n);
 char	*ft_itoa_base(ssize_t nbr, char *base);
 char	**ft_split(char const *s, char c);
 void	quick_sort(int *tab, size_t size);
-int		ft_lower_bound(int arr[], size_t size, int value);
+size_t	ft_lower_bound(int arr[], size_t size, int target);
 size_t	ft_lis_len(int arr[], size_t size);
 
 #endif

@@ -6,19 +6,27 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 22:57:54 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 23:18:46 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/18 23:56:09 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lower_bound(int arr[], size_t size, int value)
+size_t	ft_lower_bound(int arr[], size_t size, int target)
 {
-	size_t	i;
+	size_t	left;
+	size_t	right;
+	size_t	mid;
 
-	i = -1;
-	while (++i < size)
-		if (arr[i] < value)
-			return (i);
-	return (-1);
+	left = 0;
+	right = size;
+	while (left < right)
+	{
+		mid = left + (right - left) / 2;
+		if (arr[mid] < target)
+			left = mid + 1;
+		else
+			right = mid;
+	}
+	return (left);
 }
