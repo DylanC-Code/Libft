@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int.h                                              :+:      :+:    :+:   */
+/*   ft_int_in_arr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 23:11:01 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/19 11:06:40 by dcastor          ###   ########.fr       */
+/*   Created: 2025/05/19 11:06:52 by dcastor           #+#    #+#             */
+/*   Updated: 2025/05/19 11:07:41 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INT_H
-# define INT_H
+#include "libft.h"
 
-# include "libft.h"
+int	ft_int_in_array(int *arr, size_t size, int value)
+{
+	size_t	i;
 
-int	*ft_dup_int_arr(int arr[], size_t size);
-int	ft_int_in_array(int *arr, size_t size, int value);
-
-#endif
+	i = -1;
+	while (++i < size)
+		if (arr[i] == value)
+			return (true);
+	return (false);
+}
