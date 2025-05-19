@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/19 18:23:32 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/19 18:42:54 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	string/ft_strchr.c \
 	string/ft_strrchr.c \
 	string/ft_strncmp.c \
+	string/ft_strcmp.c \
 	string/ft_strnstr.c \
 	string/ft_strdup.c \
 	string/ft_substr.c \
