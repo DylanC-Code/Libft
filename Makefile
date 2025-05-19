@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/19 17:32:25 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/19 18:23:32 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	list/ft_lstiter.c \
 	list/ft_lstmap.c \
 	validate/is_valid_number.c \
+	utils/get_next_line.c \
 )
 
 OBJS = $(patsubst  %.c, $(BUILD_DIR)%.o, $(SRCS))
