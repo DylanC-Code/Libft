@@ -6,12 +6,12 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 20:11:44 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 20:18:55 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/20 09:45:32 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DLST_H
-# define DLST_H
+#ifndef DLIST_H
+# define DLIST_H
 
 typedef struct s_dlist
 {

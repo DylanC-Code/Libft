@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 15:17:34 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/19 18:38:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/20 09:46:23 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ void					quick_sort(int *tab, size_t size);
 size_t					ft_lower_bound(int arr[], size_t size, int target);
 size_t					ft_lis_len(int arr[], size_t size);
 char					*get_next_line(int fd);
-;
 
 #endif
