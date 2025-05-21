@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:02:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/19 18:34:38 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/21 11:12:20 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	*get_next_line(int fd)
 	line = extract_line(node);
 	if (!line)
 		return (cleanup_fd_node(&fd_list, fd), NULL);
+	if (!*node->buffer)
+		(cleanup_fd_node(&fd_list, fd));
 	return (line);
 }
 
