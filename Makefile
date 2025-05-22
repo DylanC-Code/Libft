@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/22 11:53:15 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/22 12:44:18 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	output/ft_putstr_fd.c \
 	output/ft_putendl_fd.c \
 	output/ft_putnbr_fd.c \
+	output/print_err.c \
 	\
 	list/ft_lstsome.c \
 	list/ft_lstnew.c \
