@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 14:12:02 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 14:37:16 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 /* Status */
 typedef int			t_status;
 
-# define ERROR -1
-# define NOOP 0
+# define ERROR 0
+# define NOOP -1
 # define SUCCESS 1
 
 /* Bool */
