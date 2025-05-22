@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:26:06 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 14:12:02 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,17 @@ typedef struct s_dlist
 	struct s_dlist	*next;
 	struct s_dlist	*prev;
 }					t_dlist;
+
+# include "bit.h"
+# include "char.h"
+# include "dlist.h"
+# include "int.h"
+# include "list.h"
+# include "mem.h"
+# include "number.h"
+# include "output.h"
+# include "strs.h"
+# include "utils.h"
+# include "validate.h"
 
 #endif
