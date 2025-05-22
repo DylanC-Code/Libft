@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:13:30 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/20 09:46:06 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 11:28:12 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@
 # include "dlist.h"
 # include "int.h"
 # include "number.h"
+
+typedef int t_status;
+
+#define ERROR -1
+#define NOOP 0
+#define SUCCESS 1
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
