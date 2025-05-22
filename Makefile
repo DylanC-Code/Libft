@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/22 12:44:18 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/22 12:58:21 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	string/ft_strtrim.c \
 	string/ft_strmapi.c \
 	string/ft_striteri.c \
+	string/ft_ends_with.c \
 	\
 	utils/ft_split.c \
 	utils/ft_atoi.c \
