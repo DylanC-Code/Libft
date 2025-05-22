@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 12:05:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:59:10 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 14:48:53 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(size_t, char));
 void	ft_striteri(char *s, void (*f)(size_t, char *));
 bool	ft_ends_with(char *str, char *pattern);
+size_t	ft_count_occ(char *str, char c);
 
 #endif
