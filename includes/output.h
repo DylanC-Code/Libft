@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   output.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 11:49:57 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:15:11 by dcastor          ###   ########.fr       */
+/*   Created: 2025/05/22 12:10:29 by dcastor           #+#    #+#             */
+/*   Updated: 2025/05/22 12:10:59 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "strs.h"
+#ifndef OUTPUT_H
+# define OUTPUT_H
 
-char	*ft_strmapi(char const *s, char (*f)(size_t, char))
-{
-	const size_t	len = ft_strlen(s);
-	size_t			i;
-	char			*result;
+# include <stdlib.h>
 
-	i = -1;
-	result = malloc(len + 1);
-	if (!result)
-		return (NULL);
-	while (++i < len)
-		result[i] = f(i, s[i]);
-	result[i] = '\0';
-	return (result);
-}
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+#endif

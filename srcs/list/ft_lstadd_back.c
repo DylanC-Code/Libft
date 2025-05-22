@@ -6,11 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:42:50 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 10:48:08 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:21:58 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "list.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

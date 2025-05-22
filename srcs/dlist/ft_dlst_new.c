@@ -6,11 +6,12 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 20:13:56 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/18 20:16:07 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 11:58:04 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mem.h"
+#include <stdlib.h>
 
 t_dlist	*ft_dlst_new(void *content)
 {

@@ -6,13 +6,14 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:29:22 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 14:40:52 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:14:29 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "strs.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, size_t start, size_t len)
 {
 	const size_t	s_len = ft_strlen(s);
 	char			*str;

@@ -6,11 +6,12 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:13:23 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 17:26:35 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:13:43 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "strs.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
 {

@@ -6,15 +6,15 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:02:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 11:13:55 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:23:52 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* =============== Importation =============== */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
+#include "strs.h"
+#include "utils.h"
 #include <unistd.h>
 
 /* =============== Declaration =============== */

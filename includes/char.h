@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   char.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 16:52:27 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/23 16:54:22 by dcastor          ###   ########.fr       */
+/*   Created: 2025/05/22 12:11:19 by dcastor           #+#    #+#             */
+/*   Updated: 2025/05/22 12:11:52 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef CHAR_H
+# define CHAR_H
 
-int	ft_isalnum(int c)
-{
-	return (ft_isalpha(c) || ft_isdigit(c));
-}
+# include <stdlib.h>
+
+int				ft_toupper(int c);
+int				ft_tolower(int c);
+
+#endif

@@ -6,13 +6,13 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 13:41:36 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/10 13:49:49 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:21:20 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "list.h"
 
-bool	ft_lstsome(t_list *head, bool (*f)(t_list*))
+bool	ft_lstsome(t_list *head, bool (*f)(t_list *))
 {
 	while (head)
 	{

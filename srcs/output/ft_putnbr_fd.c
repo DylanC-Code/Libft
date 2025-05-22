@@ -6,11 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 21:40:49 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 20:20:29 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:20:55 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 static unsigned char	ft_intlen(int nbr)
 {

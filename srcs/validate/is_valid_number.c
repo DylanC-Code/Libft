@@ -6,11 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 16:48:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/09 16:52:29 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:22:51 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "validate.h"
 
 bool	is_valid_number(char *str)
 {

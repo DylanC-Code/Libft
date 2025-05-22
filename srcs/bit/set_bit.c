@@ -6,13 +6,13 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 17:54:45 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/16 17:56:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 11:50:42 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-__uint32_t	set_bit(__uint32_t value, __uint8_t bit_index)
+unsigned int	set_bit(unsigned int value, unsigned char bit_index)
 {
 	return (value |= (1 << bit_index));
 }

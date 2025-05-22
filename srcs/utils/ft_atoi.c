@@ -6,11 +6,12 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:49:54 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 20:14:15 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:15:28 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "validate.h"
 
 static bool	is_space(int c)
 {

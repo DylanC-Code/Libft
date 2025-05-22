@@ -6,11 +6,12 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 23:05:15 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/20 09:46:33 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/22 12:19:13 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "utils.h"
 
 size_t	ft_lis_len(int arr[], size_t size)
 {

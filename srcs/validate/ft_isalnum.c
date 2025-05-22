@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 11:49:57 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:15:11 by dcastor          ###   ########.fr       */
+/*   Created: 2025/04/23 16:52:27 by dcastor           #+#    #+#             */
+/*   Updated: 2025/05/22 12:22:38 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "strs.h"
+#include "validate.h"
 
-char	*ft_strmapi(char const *s, char (*f)(size_t, char))
+int	ft_isalnum(int c)
 {
-	const size_t	len = ft_strlen(s);
-	size_t			i;
-	char			*result;
-
-	i = -1;
-	result = malloc(len + 1);
-	if (!result)
-		return (NULL);
-	while (++i < len)
-		result[i] = f(i, s[i]);
-	result[i] = '\0';
-	return (result);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
