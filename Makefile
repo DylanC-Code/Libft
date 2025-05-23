@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/22 14:49:08 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/23 12:56:31 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	number/ft_max.c \
 	\
 	string/ft_count_occ.c \
+	string/ft_ends_with.c \
+	string/ft_str_contains_any.c \
 	string/ft_strlen.c \
 	string/ft_strlcpy.c \
 	string/ft_strlcat.c \
@@ -58,7 +60,6 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	string/ft_strtrim.c \
 	string/ft_strmapi.c \
 	string/ft_striteri.c \
-	string/ft_ends_with.c \
 	\
 	utils/ft_split.c \
 	utils/ft_atoi.c \

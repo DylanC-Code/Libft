@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 12:05:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 14:48:53 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/23 12:56:57 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include "libft.h"
 
+size_t	ft_count_occ(char *str, char c);
+bool	ft_ends_with(char *str, char *pattern);
+bool	ft_str_contains_any(char *str, char *set);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz);
 size_t	ft_strlcat(char *dst, const char *src, size_t siz);
@@ -29,7 +32,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(size_t, char));
 void	ft_striteri(char *s, void (*f)(size_t, char *));
-bool	ft_ends_with(char *str, char *pattern);
-size_t	ft_count_occ(char *str, char c);
 
 #endif
