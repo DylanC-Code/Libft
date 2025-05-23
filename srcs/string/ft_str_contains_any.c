@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:52:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/23 13:00:37 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/23 18:17:59 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ char	*ft_str_contains_any(char *str, char *set)
 	addr = NULL;
 	while (str && *str)
 	{
-		addr = ft_strchr(set, *str++);
+		addr = ft_strchr(set, *str);
 		if (addr)
-			return (addr);
+			return (str);
+		str++;
 	}
 	return (NULL);
 }
