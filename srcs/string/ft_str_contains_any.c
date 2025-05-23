@@ -6,16 +6,22 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:52:48 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/23 12:55:01 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/23 13:00:37 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_str_contains_any(char *str, char *set)
+char	*ft_str_contains_any(char *str, char *set)
 {
+	char	*addr;
+
+	addr = NULL;
 	while (str && *str)
-		if (ft_strchr(set, *str++))
-			return (true);
-	return (false);
+	{
+		addr = ft_strchr(set, *str++);
+		if (addr)
+			return (addr);
+	}
+	return (NULL);
 }

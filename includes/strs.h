@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 12:05:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/23 12:56:57 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/23 12:59:33 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 size_t	ft_count_occ(char *str, char c);
 bool	ft_ends_with(char *str, char *pattern);
-bool	ft_str_contains_any(char *str, char *set);
+char	*ft_str_contains_any(char *str, char *set);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz);
 size_t	ft_strlcat(char *dst, const char *src, size_t siz);
