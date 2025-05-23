@@ -6,11 +6,11 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 22:01:59 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:20:30 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/23 11:13:29 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "output.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
