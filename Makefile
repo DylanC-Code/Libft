@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/23 12:56:31 by dcastor          ###   ########.fr        #
+#    Updated: 2025/05/23 20:34:17 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	utils/ft_uitoa_base.c \
 	utils/ft_uitoa.c \
 	utils/quick_sort.c \
+	utils/gnl/get_next_line.c \
 	\
 	output/ft_putchar_fd.c \
 	output/ft_putstr_fd.c \
@@ -96,8 +97,6 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	validate/ft_isascii.c \
 	validate/ft_isprint.c \
 	validate/is_valid_number.c \
-	\
-	utils/get_next_line.c \
 )
 
 OBJS = $(patsubst  %.c, $(BUILD_DIR)%.o, $(SRCS))
@@ -119,7 +118,7 @@ $(BUILD_DIR)%.o: %.c
 	@echo "[$(NAME)] Compiling $<"
 
 clean:
-	@rm -f $(OBJS) $(OBJ_BONUS)
+	@rm -rf $(BUILD_DIR)
 	@echo "File objects cleaned 🧼"
 
 fclean: clean
