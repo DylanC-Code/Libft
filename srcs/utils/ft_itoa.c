@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:49:54 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/28 20:16:56 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:36:57 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ unsigned char	ft_intlen(int nbr)
 char	*ft_itoa(int n)
 {
 	const unsigned int	len = ft_intlen(n);
-	const bool			positive = n >= 0;
+	const int			positive = n >= 0;
 	char				*result;
 	long				l_nbr;
 	unsigned int		i;

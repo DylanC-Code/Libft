@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 11:09:04 by dcastor           #+#    #+#             */
-/*   Updated: 2025/04/27 13:08:54 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:35:56 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 static unsigned int	count_words(const char *str, char delimiter)
 {
-	bool			in_word;
+	int				in_word;
 	unsigned int	count;
 	size_t			i;
 
-	in_word = false;
+	in_word = FALSE;
 	count = 0;
 	i = -1;
 	while (str[++i])
 	{
 		if (str[i] == delimiter)
-			in_word = false;
-		else if (in_word == false)
+			in_word = FALSE;
+		else if (in_word == FALSE)
 		{
-			in_word = true;
+			in_word = TRUE;
 			count++;
 		}
 	}

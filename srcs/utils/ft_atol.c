@@ -6,14 +6,14 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 11:15:33 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 12:15:44 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:36:47 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "validate.h"
 
-static bool	is_space(int c)
+static int	is_space(int c)
 {
 	const char	*white_spaces = " \f\n\r\t\v";
 	size_t		i;
@@ -21,8 +21,8 @@ static bool	is_space(int c)
 	i = -1;
 	while (white_spaces[++i])
 		if (c == white_spaces[i])
-			return (true);
-	return (false);
+			return (TRUE);
+	return (FALSE);
 }
 
 static void	*jump_whitespaces(char *s)

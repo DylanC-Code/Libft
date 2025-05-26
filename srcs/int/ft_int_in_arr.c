@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 11:06:52 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 14:38:16 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:34:39 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	ft_int_in_array(int *arr, size_t size, int value)
 	i = -1;
 	while (++i < size)
 		if (arr[i] == value)
-			return (true);
-	return (false);
+			return (TRUE);
+	return (FALSE);
 }

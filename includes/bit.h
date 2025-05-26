@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 15:20:08 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/16 17:57:05 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:31:31 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "libft.h"
 
-bool		bit_is_set(__uint32_t value, __uint8_t bit_index);
-__uint32_t	set_bit(__uint32_t value, __uint8_t bit_index);
+int				bit_is_set(unsigned int value, unsigned char bit_index);
+unsigned int	set_bit(unsigned int value, unsigned char bit_index);
 
 #endif

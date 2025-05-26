@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:20:58 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/22 14:39:03 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/05/26 10:26:50 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*src;
-	size_t	i;
+	size_t			i;
 
 	i = -1;
 	src = (unsigned char *)s;
