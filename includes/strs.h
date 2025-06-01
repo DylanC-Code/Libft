@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 12:05:53 by dcastor           #+#    #+#             */
-/*   Updated: 2025/05/29 18:07:25 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/06/01 11:15:30 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 
+char	*ft_contains_substr(char *str, char *substr);
 size_t	ft_count_occ(char *str, char c);
 int		ft_ends_with(char *str, char *pattern);
 void	ft_free_strs(char **strs);

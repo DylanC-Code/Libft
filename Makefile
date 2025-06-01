@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 16:35:34 by dcastor           #+#    #+#              #
-#    Updated: 2025/05/29 18:08:09 by dcastor          ###   ########.fr        #
+#    Updated: 2025/06/01 11:15:45 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRCS = $(addprefix $(SRCS_DIR), \
 	number/ft_abs.c \
 	number/ft_max.c \
 	\
+	string/ft_contains_substr.c \
 	string/ft_count_occ.c \
 	string/ft_ends_with.c \
 	string/ft_starts_with.c \
